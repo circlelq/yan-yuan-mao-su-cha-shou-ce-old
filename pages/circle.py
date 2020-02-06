@@ -65,6 +65,7 @@ labels = [
 	[12, '外貌', lambda x:x],
 	[13, '性格', lambda x: '亲人可抱' if x == 6 else '亲人不可抱 可摸' if x == 5 else '薛定谔亲人' if x == 4 else '吃东西时可以一直摸' if x == 3 else '吃东西时可以摸一下' if x == 2 else '怕人 安全距离1m以内' if x == 1 else '怕人 安全距离1m以外' if x == 0 else '未知 数据缺失' ],
 	[14, '第一次被目击时间', lambda x: str(x)],
+	[16, '关系', lambda x: str(x)],
 ]
 
 data_json = []
@@ -85,6 +86,12 @@ for i in range(rowNum):
 if not os.path.exists('cats'):
 	os.makedirs('cats') 
 
+names = []
+for line in data_json:
+	if line['是否写入图鉴'] != '':
+		names.append(line['名字'])
+print(names)
+
 for line in data_json:
 	if line['是否写入图鉴'] != '':
 		if not os.path.exists('cats/'+ line['名字']):
@@ -101,8 +108,16 @@ for line in data_json:
 					continue
 				#print(j[1] + " " + str(line[j[1]]))
 				f.write('{category:"' + j[1] + '",\n content:" ' + str(line[j[1]]) + '",},\n')
+
 			#编写日期
-			f.write('{category:"编写日期",\n content:" ' + today + '",},\n')
+			f.write('{category:"编写日期",\n content:" ' + today + '",},\n], \n')
+
+			#增加关系跳转项
+			f.write('relationship:[')
+			for i in names:
+				if i in line['关系']:
+					f.write( '{ rela:"' + i + '"},\n')		
+
 			f.write( '], \n')
 			f.write( 'nums:[\n')
 			for i in range(int(line['是否写入图鉴'])):
@@ -110,6 +125,7 @@ for line in data_json:
 			f.write( ']},\n')
 			with open('js.txt','r') as f2:
 				f.write(f2.read())
+			
 		#补充另外两个文件
 		with open('cats/' + line['名字'] + '/' + line['名字'] + '.json', 'w') as f:
 			with open('json.txt','r') as f2:

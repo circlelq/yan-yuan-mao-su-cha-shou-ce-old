@@ -35,7 +35,7 @@
   margin-bottom: 10rpx;
   margin-top: 20rpx;
   display:flex;
-  color:#626262;
+  color:#3385c9;
   font-weight:bold;
   flex-direction: row;
   flex-wrap: wrap;

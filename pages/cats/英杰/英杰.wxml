@@ -15,6 +15,12 @@
   </view>
 </view>
 
+<view wx:for = "{{relationship}}" class = "itemname3">
+  <navigator url="/pages/cats/{{item.rela}}/{{item.rela}}" >
+     {{item.rela}}
+  </navigator>
+</view>
+
 <text> \n </text>
 
 <block wx:for="{{nums}}">
