@@ -2,15 +2,37 @@
   "pages": [
     "pages/index/index",
     "pages/about/about",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/fostered/fostered",
+    "pages/dead/dead",
+    "pages/unknown/unknown"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "北大猫咪图鉴",
     "navigationBarTextStyle": "black",
-    "enablePullDownRefresh":true
+    "enablePullDownRefresh": true
   },
-  "sitemapLocation": "sitemap.json"
-  
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "text": "在校",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "毕业",
+        "pagePath": "pages/fostered/fostered"
+      },
+      {
+        "text": "休学",
+        "pagePath": "pages/unknown/unknown"
+      },
+      {
+        "text": "喵星",
+        "pagePath": "pages/dead/dead"
+      }
+    ]
+  }
 }

@@ -15,7 +15,7 @@ catname:"墨方",
 {category:"性格",
  content:" 怕人 安全距离1m以内",},
 {category:"编写日期",
- content:" 2020-02-06",},
+ content:" 2020-02-07",},
 ], 
 relationship:[], 
 nums:[

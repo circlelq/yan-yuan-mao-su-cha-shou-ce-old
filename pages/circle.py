@@ -57,15 +57,16 @@ labels = [
 	[3, '是否写入图鉴', lambda x:x],
 	[4, '昵称', lambda x:x],
 	[5, '毛色', lambda x:x],
+	
 	[7, '性别', lambda x:'公' if x == 1 else '母' if x == 0 else '未知'],
-	[8, '状况', lambda x:'不明' if len(x) < 1 else x],
-	[9, '绝育情况', lambda x:'已绝育' if x == 1 else '未绝育' if x == 0 else '未知/可能不适宜绝育'],
-	[10, '绝育时间', lambda x:str(x)],
-	[11, '出生时间', lambda x:x],
-	[12, '外貌', lambda x:x],
-	[13, '性格', lambda x: '亲人可抱' if x == 6 else '亲人不可抱 可摸' if x == 5 else '薛定谔亲人' if x == 4 else '吃东西时可以一直摸' if x == 3 else '吃东西时可以摸一下' if x == 2 else '怕人 安全距离1m以内' if x == 1 else '怕人 安全距离1m以外' if x == 0 else '未知 数据缺失' ],
-	[14, '第一次被目击时间', lambda x: str(x)],
-	[16, '关系', lambda x: str(x)],
+	[9, '状况', lambda x:'不明' if len(x) < 1 else x],
+	[10, '绝育情况', lambda x:'已绝育' if x == 1 else '未绝育' if x == 0 else '未知/可能不适宜绝育'],
+	[11, '绝育时间', lambda x:str(x)],
+	[12, '出生时间', lambda x:x],
+	[13, '外貌', lambda x:x],
+	[14, '性格', lambda x: '亲人可抱' if x == 6 else '亲人不可抱 可摸' if x == 5 else '薛定谔亲人' if x == 4 else '吃东西时可以一直摸' if x == 3 else '吃东西时可以摸一下' if x == 2 else '怕人 安全距离1m以内' if x == 1 else '怕人 安全距离1m以外' if x == 0 else '未知 数据缺失' ],
+	[15, '第一次被目击时间', lambda x: str(x)],
+	[17, '关系', lambda x: str(x)],
 ]
 
 data_json = []
@@ -86,11 +87,13 @@ for i in range(rowNum):
 if not os.path.exists('cats'):
 	os.makedirs('cats') 
 
+# 用于搜索关系链接
 names = []
 for line in data_json:
 	if line['是否写入图鉴'] != '':
 		names.append(line['名字'])
-print(names)
+#print(names)
+
 
 for line in data_json:
 	if line['是否写入图鉴'] != '':
@@ -138,3 +141,149 @@ for line in data_json:
 			with open('wxml.txt','r') as f2:
 				f.write(f2.read())
 
+
+#几个分页的index内容（显示哪些猫）
+health = []
+fostered = []
+dead = []
+unknown = []
+nainiu = []
+sanhua = []
+chunse = []
+lihua = []
+ju = []
+suoyou = []
+
+
+# 分类
+for i in range(rowNum):
+	if data_list[i][3] != '':
+		if data_list[i][9] == '离世':
+			dead.append(data_list[i][2])
+		if data_list[i][9] == '送养':
+			fostered.append(data_list[i][2])
+		if data_list[i][9] == '不明' or data_list[i][9] == '许久未见'or data_list[i][9] == '失踪' and data_list[i][2] != '花灵灵':
+			unknown.append(data_list[i][2])
+		if data_list[i][9] == '健康' or data_list[i][9] == '口炎' and data_list[i][2] != '出竹':
+			if data_list[i][6] == 1:
+				lihua.append(data_list[i][2])
+			if data_list[i][6] == 2:
+				ju.append(data_list[i][2])
+			if data_list[i][6] == 3:
+				nainiu.append(data_list[i][2])
+			if data_list[i][6] == 4:
+				sanhua.append(data_list[i][2])
+			if data_list[i][6] == 5:
+				chunse.append(data_list[i][2])
+
+lihua.insert(0,'出竹')
+unknown.insert(0,'花灵灵')
+health = lihua + ju + nainiu + sanhua + chunse
+suoyou = health + unknown + dead
+
+#创建毛色分类的js文件
+#奶牛
+if not os.path.exists('index/奶牛'):
+	os.makedirs('index/'+ '奶牛')#创建每只猫的文件夹
+		#创建js文件
+with open('index/奶牛/奶牛' + '.js', 'w') as f:
+	f.write( 'Page({\ndata: { \n catlist: [\n')
+	for name in nainiu:
+		f.write('{ name:"'+name+'"},')
+	with open('js2.txt','r') as f2:
+		f.write(f2.read())
+
+#狸花
+if not os.path.exists('index/狸花'):
+	os.makedirs('index/'+ '狸花')#创建每只猫的文件夹
+		#创建js文件
+with open('index/狸花/狸花' + '.js', 'w') as f:
+	f.write( 'Page({\ndata: { \n catlist: [\n')
+	for name in lihua:
+		f.write('{ name:"'+name+'"},')
+	with open('js2.txt','r') as f2:
+		f.write(f2.read())
+
+#玳瑁及三花
+if not os.path.exists('index/玳瑁及三花'):
+	os.makedirs('index/'+ '玳瑁及三花')#创建每只猫的文件夹
+		#创建js文件
+with open('index/玳瑁及三花/玳瑁及三花' + '.js', 'w') as f:
+	f.write( 'Page({\ndata: { \n catlist: [\n')
+	for name in sanhua:
+		f.write('{ name:"'+name+'"},')
+	with open('js2.txt','r') as f2:
+		f.write(f2.read())
+
+#纯色
+if not os.path.exists('index/纯色'):
+	os.makedirs('index/'+ '纯色')#创建每只猫的文件夹
+		#创建js文件
+with open('index/纯色/纯色' + '.js', 'w') as f:
+	f.write( 'Page({\ndata: { \n catlist: [\n')
+	for name in chunse:
+		f.write('{ name:"'+name+'"},')
+	with open('js2.txt','r') as f2:
+		f.write(f2.read())
+
+#橘猫及橘白
+if not os.path.exists('index/橘猫及橘白'):
+	os.makedirs('index/'+ '橘猫及橘白')#创建每只猫的文件夹
+		#创建js文件
+with open('index/橘猫及橘白/橘猫及橘白' + '.js', 'w') as f:
+	f.write( 'Page({\ndata: { \n catlist: [\n')
+	for name in ju:
+		f.write('{ name:"'+name+'"},')
+	with open('js2.txt','r') as f2:
+		f.write(f2.read())
+
+#所有
+if not os.path.exists('index/所有'):
+	os.makedirs('index/'+ '所有')#创建每只猫的文件夹
+		#创建js文件
+with open('index/所有/所有' + '.js', 'w') as f:
+	f.write( 'Page({\ndata: { \n catlist: [\n')
+	for name in suoyou:
+		f.write('{ name:"'+name+'"},')
+	with open('js2.txt','r') as f2:
+		f.write(f2.read())
+
+#创建状态分类的js文件
+#送养
+if not os.path.exists('fostered'):
+	os.makedirs('fostered')#创建每只猫的文件夹
+		#创建js文件
+with open('fostered/fostered' + '.js', 'w') as f:
+	f.write( 'Page({\ndata: { \n catlist: [\n')
+	for name in fostered:
+		f.write('{ name:"'+name+'"},')
+	with open('js2.txt','r') as f2:
+		f.write(f2.read())
+
+#未知
+if not os.path.exists('unknown'):
+	os.makedirs('unknown')#创建每只猫的文件夹
+		#创建js文件
+with open('unknown/unknown' + '.js', 'w') as f:
+	f.write( 'Page({\ndata: { \n catlist: [\n')
+	for name in unknown:
+		f.write('{ name:"'+name+'"},')
+	with open('js2.txt','r') as f2:
+		f.write(f2.read())
+
+#离世
+if not os.path.exists('dead'):
+	os.makedirs('dead')#创建每只猫的文件夹
+		#创建js文件
+with open('dead/dead' + '.js', 'w') as f:
+	f.write( 'Page({\ndata: { \n catlist: [\n')
+	for name in dead:
+		f.write('{ name:"'+name+'"},')
+	with open('js2.txt','r') as f2:
+		f.write(f2.read())
+
+
+print(fostered)
+
+
+ 
