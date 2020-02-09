@@ -1,7 +1,7 @@
 Page({
 data: { 
  catlist: [
-{ name:"出竹"},{ name:"杰希"},{ name:"麻糖"},{ name:"麻薯"},{ name:"山竹"},{ name:"出竹"},{ name:"黑米粥"},{ name:"云雾"},
+{ name:"出竹"},{ name:"杰希"},{ name:"麻糖"},{ name:"麻薯"},{ name:"山竹"},{ name:"黑米粥"},{ name:"云雾"},
     ],
     screenWidth: 0,
     screenHeight: 0,

@@ -17,7 +17,7 @@ catname:"小钒",
 {category:"性格",
  content:" 怕人 安全距离1m以外",},
 {category:"编写日期",
- content:" 2020-02-07",},
+ content:" 2020-02-09",},
 ], 
 relationship:[], 
 nums:[

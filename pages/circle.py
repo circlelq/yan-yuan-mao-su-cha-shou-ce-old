@@ -58,7 +58,7 @@ labels = [
 	[4, '昵称', lambda x:x],
 	[5, '毛色', lambda x:x],
 	
-	[7, '性别', lambda x:'公' if x == 1 else '母' if x == 0 else '未知'],
+	[8, '性别', lambda x:'公' if x == 1 else '母' if x == 0 else '未知'],
 	[9, '状况', lambda x:'不明' if len(x) < 1 else x],
 	[10, '绝育情况', lambda x:'已绝育' if x == 1 else '未绝育' if x == 0 else '未知/可能不适宜绝育'],
 	[11, '绝育时间', lambda x:str(x)],
@@ -105,7 +105,7 @@ for line in data_json:
 			for j in labels:
 				#打印名字，需要复制到index.js文件中
 				if j[1] == '名字':
-					print('{ name:"'+str(line[j[1]])+'"},')
+					#print('{ name:"'+str(line[j[1]])+'"},')
 					continue
 				if str(line[j[1]]) == '' or j[1] == '是否写入图鉴':
 					continue
@@ -118,7 +118,7 @@ for line in data_json:
 			#增加关系跳转项
 			f.write('relationship:[')
 			for i in names:
-				if i in line['关系']:
+				if i in line['关系'] and i!=line['名字']:
 					f.write( '{ rela:"' + i + '"},\n')		
 
 			f.write( '], \n')
@@ -162,9 +162,9 @@ for i in range(rowNum):
 			dead.append(data_list[i][2])
 		if data_list[i][9] == '送养':
 			fostered.append(data_list[i][2])
-		if data_list[i][9] == '不明' or data_list[i][9] == '许久未见'or data_list[i][9] == '失踪' and data_list[i][2] != '花灵灵':
+		if (data_list[i][9] == '不明' or data_list[i][9] == '许久未见'or data_list[i][9] == '失踪') and data_list[i][2] != '花灵灵':
 			unknown.append(data_list[i][2])
-		if data_list[i][9] == '健康' or data_list[i][9] == '口炎' and data_list[i][2] != '出竹':
+		if (data_list[i][9] == '健康' or data_list[i][9] == '口炎') and data_list[i][2] != '出竹':
 			if data_list[i][6] == 1:
 				lihua.append(data_list[i][2])
 			if data_list[i][6] == 2:
@@ -283,7 +283,7 @@ with open('dead/dead' + '.js', 'w') as f:
 		f.write(f2.read())
 
 
-print(fostered)
+print(lihua)
 
 
  

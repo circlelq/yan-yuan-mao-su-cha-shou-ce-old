@@ -75,33 +75,34 @@
   border-bottom: 1px solid #eee;
 }
 
-/*猫咪列表*/
-.catlist {
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: visible;
-  font-size: 0.8rem;
-}
 
 /*每一只猫*/
 .catitem{
-  height: 3rem;
-  line-height: 1.5rem;
+  height: 3.7rem;
   display: flex;
-  border-bottom: 1px solid #eee;
-  border-top: 1px solid #eee;
-  padding: 10rpx;
+  align-items: center;
   width: 100%;
 }
 
-/*左侧的图片*/
-.cat-circle{
-  text-align: center;
-  vertical-align: middle;
+/*分割线样式*/
+.divLine{
+ background: #eee;
+ height: 1px;
+ margin-left: 5rem;
 }
+
 
 /*猫名称*/
 .cat-name{
+  font-size: 1rem;
+  flex-direction:row;
+  margin-left: 5rem;
+  color:black;
+  text-align: center;
+}
+
+/*搜索框*/
+.search{
   font-size: 1rem;
   align-items: center;
   display:flex;
@@ -112,22 +113,15 @@
   color:black;
 }
 
-/*搜索框*/
-.search{
-  font-size: 1rem;
-  align-items: center;
-  display:flex;
-  flex-direction:row;
-  margin-left: 0.9rem;
-  margin-bottom: 10rpx;
-  margin-top: 10rpx;
-  color:black;
-}
-
 .avator {
   width: 3rem;
   height: 3rem;
   margin-left: 1rem;
-  border-radius: 50%;
   position: absolute;
+  align-items: center;
+  display:flex;
+}
+
+.copy{
+  color: #3385c9;
 }

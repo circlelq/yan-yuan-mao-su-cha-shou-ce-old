@@ -8,65 +8,69 @@
 
 <text> \n </text>
 
-<view class="catlist">
+
 
 <view class="catitem">
+  <view class="avator">
+    <icon type="search" size="37" />
+  </view>
   <view class="search">
   <input placeholder="请输入猫咪名称" bindconfirm="bindconfirmT" auto-focus/>
   </view>
 </view>
-</view>
 
-<view class="catlist">
-  <navigator url="/pages/index/玳瑁及三花/玳瑁及三花" >
-    <view class="catitem">
-      <image  class = 'avator ' src="https://gitee.com/circlelq/cat_photos/raw/master/花灵灵_circle.png" mode='aspectFill' ></image>
-      <view class= "cat-name">三花和玳瑁</view> 
-    </view>
-  </navigator>
-</view>
+<view class="divLine"></view>
 
-<view class="catlist">
-  <navigator url="/pages/index/纯色/纯色" >
-    <view class="catitem">
-      <image  class = 'avator ' src="https://gitee.com/circlelq/cat_photos/raw/master/薏米_circle.png" mode='aspectFill' ></image>
-      <view class= "cat-name">纯色</view>
-    </view>
-  </navigator>
-</view>
+<navigator url="/pages/index/玳瑁及三花/玳瑁及三花" >
+  <view class="catitem">
+    <image  class = 'avator ' src="https://gitee.com/circlelq/cat_photos/raw/master/花灵灵_circle.png" mode='aspectFill' ></image>
+    <view class="cat-name">三花和玳瑁</view> 
+  </view>
+</navigator>
 
-<view class="catlist">
-  <navigator url="/pages/index/橘猫及橘白/橘猫及橘白" >
-    <view class="catitem">
-      <image  class = 'avator ' src="https://gitee.com/circlelq/cat_photos/raw/master/畅蠢_circle.png" mode='aspectFill' ></image>
-      <view class= "cat-name">橘猫和橘白</view>
-    </view>
-  </navigator>
-</view>
+<view class="divLine"></view>
 
-<view class="catlist">
-  <navigator url="/pages/index/奶牛/奶牛" >
-    <view class="catitem">
-      <image  class = 'avator ' src="https://gitee.com/circlelq/cat_photos/raw/master/英杰_circle.png" mode='aspectFill' ></image>
-      <view class= "cat-name">奶牛</view>
-    </view>
-  </navigator>
-</view>
+<navigator url="/pages/index/纯色/纯色" >
+  <view class="catitem">
+    <image  class = 'avator ' src="https://gitee.com/circlelq/cat_photos/raw/master/薏米_circle.png" mode='aspectFill' ></image>
+    <view class= "cat-name">纯色</view>
+  </view>
+</navigator>
 
-<view class="catlist">
-  <navigator url="/pages/index/狸花/狸花" >
-    <view class="catitem">
-      <image  class = 'avator ' src="https://gitee.com/circlelq/cat_photos/raw/master/山竹_circle.png" mode='aspectFill' ></image>
-      <view class= "cat-name">狸花</view>
-    </view>
-  </navigator>
-</view>
+<view class="divLine"></view>
 
-<view class="catlist">
-  <navigator url="/pages/index/所有/所有" >
-    <view class="catitem">
-      <image  class = 'avator ' src="/pages/images/huihui_circle.png" mode='aspectFill' ></image>
-      <view class= "cat-name">所有</view>
-    </view>
-  </navigator>
-</view>
+<navigator url="/pages/index/橘猫及橘白/橘猫及橘白" >
+  <view class="catitem">
+    <image  class = 'avator ' src="https://gitee.com/circlelq/cat_photos/raw/master/畅蠢_circle.png" mode='aspectFill' ></image>
+    <view class= "cat-name">橘猫和橘白</view>
+  </view>
+</navigator>
+
+<view class="divLine"></view>
+
+<navigator url="/pages/index/奶牛/奶牛" >
+  <view class="catitem">
+    <image  class = 'avator ' src="https://gitee.com/circlelq/cat_photos/raw/master/英杰_circle.png" mode='aspectFill' ></image>
+    <view class= "cat-name">奶牛</view>
+  </view>
+</navigator>
+
+<view class="divLine"></view>
+
+<navigator url="/pages/index/狸花/狸花" >
+  <view class="catitem">
+    <image  class = 'avator ' src="https://gitee.com/circlelq/cat_photos/raw/master/山竹_circle.png" mode='aspectFill' ></image>
+    <view class= "cat-name">狸花</view>
+  </view>
+</navigator>
+
+<view class="divLine"></view>
+
+<navigator url="/pages/index/所有/所有" >
+  <view class="catitem">
+    <image  class = 'avator ' src="/pages/images/huihui_circle.png" mode='aspectFill' ></image>
+    <view class= "cat-name">所有</view>
+  </view>
+</navigator>
+
+<view class="divLine"></view>

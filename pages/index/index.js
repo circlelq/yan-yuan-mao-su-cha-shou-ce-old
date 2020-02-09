@@ -6,6 +6,9 @@
     imgwidth: 0,
     imgheight: 0
   },
+   iconType: [
+     'success', 'success_no_circle', 'info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear'
+   ],
 
   onPullDownRefresh:function(){
     wx.stopPullDownRefresh()
