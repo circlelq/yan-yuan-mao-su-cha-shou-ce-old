@@ -3,7 +3,7 @@
 <view class= "catname">{{catname}}</view>
 
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" src="https://gitee.com/circlelq/cat_photos/raw/master/{{catname}}.jpg" style= "width: 93%;">
+  <image mode="widthFix" src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{catname}}.jpg" style= "width: 93%;">
   </image>
 </view>
 
@@ -26,7 +26,7 @@
 <block wx:for="{{nums}}">
 
 <view style="display:flex; justify-content:center; align-items:center;">
-  <image mode="widthFix" src="https://gitee.com/circlelq/cat_photos/raw/master/{{catname}}{{item.num}}.jpg" style= "width: 93%;">
+  <image mode="widthFix" src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{catname}}{{item.num}}.jpg" style= "width: 93%;">
   </image>
 </view>
 

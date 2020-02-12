@@ -19,7 +19,7 @@
 </view>
 
 <view class="about">
-欢迎关注协会官方公众号“<text bindtap="copyTBL" class="copy" >北大猫协</text> ”，了解更多校内流浪猫故事和协会信息~
+欢迎关注协会官方公众号“<text bindtap="copyTBL" class="copy">北大猫协</text>”，了解更多校内流浪猫故事和协会信息~点击上方会徽可以查看小程序相关推送。
 </view>
 
 <!--<web-view src="https://mp.weixin.qq.com/s/TIuxaXIpwyMR_6JRfU9fPw"> </web-view>-->
