@@ -23,7 +23,7 @@
 
 <navigator url="/pages/index/玳瑁及三花/玳瑁及三花" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/花灵灵_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="https://res.cloudinary.com/circlelq/image/upload/v1581911920/sccapku/花灵灵_circle.png" mode='aspectFill' ></image>
     <view class="cat-name">三花和玳瑁</view> 
   </view>
 </navigator>
@@ -32,7 +32,7 @@
 
 <navigator url="/pages/index/纯色/纯色" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/薏米_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="https://res.cloudinary.com/circlelq/image/upload/v1581911920/sccapku/薏米_circle.png" mode='aspectFill' ></image>
     <view class= "cat-name">纯色</view>
   </view>
 </navigator>
@@ -41,7 +41,7 @@
 
 <navigator url="/pages/index/橘猫及橘白/橘猫及橘白" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/畅蠢_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="https://res.cloudinary.com/circlelq/image/upload/v1581911920/sccapku/畅蠢_circle.png" mode='aspectFill' ></image>
     <view class= "cat-name">橘猫和橘白</view>
   </view>
 </navigator>
@@ -50,7 +50,7 @@
 
 <navigator url="/pages/index/奶牛/奶牛" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/英杰_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="https://res.cloudinary.com/circlelq/image/upload/v1581911920/sccapku/英杰_circle.png" mode='aspectFill' ></image>
     <view class= "cat-name">奶牛</view>
   </view>
 </navigator>
@@ -59,7 +59,7 @@
 
 <navigator url="/pages/index/狸花/狸花" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/山竹_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="https://res.cloudinary.com/circlelq/image/upload/v1581911920/sccapku/山竹_circle.png" mode='aspectFill' ></image>
     <view class= "cat-name">狸花</view>
   </view>
 </navigator>
