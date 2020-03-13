@@ -37,8 +37,7 @@
   display:flex;
   color:#3385c9;
   font-weight:bold;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .content {
@@ -124,4 +123,12 @@
 
 .copy{
   color: #3385c9;
+}
+
+.play{
+ margin: 0;
+ width:60rpx;
+ height: 60rpx;
+ margin-right: 20rpx;
+ border: none;
 }

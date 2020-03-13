@@ -7,6 +7,8 @@ import argparse
 import sys
 import os
 import time
+import urllib.parse
+import urllib
 
 today = time.strftime("%Y-%m-%d", time.localtime())
 
@@ -67,6 +69,7 @@ labels = [
 	[14, '性格', lambda x: '亲人可抱' if x == 6 else '亲人不可抱 可摸' if x == 5 else '薛定谔亲人' if x == 4 else '吃东西时可以一直摸' if x == 3 else '吃东西时可以摸一下' if x == 2 else '怕人 安全距离1m以内' if x == 1 else '怕人 安全距离1m以外' if x == 0 else '未知 数据缺失' ],
 	[15, '第一次被目击时间', lambda x: str(x)],
 	[17, '关系', lambda x: str(x)],
+	[22, '是否加音频', lambda x:x]
 ]
 
 data_json = []
@@ -120,12 +123,23 @@ for line in data_json:
 			for i in names:
 				if i in line['关系'] and i!=line['名字']:
 					f.write( '{ rela:"' + i + '"},\n')		
-
 			f.write( '], \n')
+			# 后面的图片数
 			f.write( 'nums:[\n')
 			for i in range(int(line['是否写入图鉴'])):
 				f.write( '{ ' + 'num: {} '.format(i+1) + '},\n')
-			f.write( ']},\n')
+			f.write( '],\n')
+			# 后面的音频数
+
+			if line['是否加音频']:
+				audio = '//course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序音频/' + line['名字']
+				audio = urllib.parse.quote(audio)
+				f.write('audioArr: [\n')
+				for i in range(line['是否加音频']):
+					f.write( '{\n ' + "src: 'https:" + audio + "{}.m4a'".format(i+1) + ',\nbl: false\n},\n')
+				f.write("],\n  audKey: '', \n},\n")
+			else:
+				f.write('},')
 			with open('js.txt','r') as f2:
 				f.write(f2.read())
 			
@@ -134,12 +148,13 @@ for line in data_json:
 			with open('json.txt','r') as f2:
 				f.write(f2.read())
 		with open('cats/' + line['名字'] + '/' + line['名字'] + '.wxml', 'w') as f:
-			if line['名字'] == '小黄鸭':
-				with open('文案/小黄鸭.txt','r') as f2:
-					f.write(f2.read())
-				continue
+			
 			with open('wxml.txt','r') as f2:
 				f.write(f2.read())
+				if line['名字'] == '小黄鸭':
+					with open('文案/小黄鸭.txt','r') as f2:
+						f.write(f2.read())
+
 
 
 #几个分页的index内容（显示哪些猫）

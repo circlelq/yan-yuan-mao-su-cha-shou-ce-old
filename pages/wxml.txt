@@ -15,10 +15,28 @@
   </view>
 </view>
 
-<view wx:for = "{{relationship}}" class = "itemname3">
-  <navigator url="/pages/cats/{{item.rela}}/{{item.rela}}" >
-     {{item.rela}}
+<view class="itemname3">
+  <navigator  wx:for = "{{relationship}}" url="/pages/cats/{{item.rela}}/{{item.rela}}" >
+     <text space="emsp">{{item.rela}} </text>
   </navigator>
+</view>
+
+<!--pages/audio/audio.wxml-->
+<!-- 猫叫声 -->
+<view class="itemname3">
+<block wx:for="{{audioArr}}" wx:key="content" wx:for-item="v" wx:for-index="key">
+  
+  <!-- 默认状态 未播放 -->
+  <view  wx:if="{{!v.bl}}" bindtap='audioPlay' data-key="{{key}}" data-id="{{v.id}}" data-bl="{{v.bl}}">
+    <image class = "play" src="/pages/images/play.png"  ></image>    
+  </view>
+
+  <!-- 当前正在播放状态 -->
+  <view wx:if="{{v.bl}}" bindtap='audioStop' data-key="{{key}}"  data-id="{{v.id}}" data-bl="{{v.bl}}">
+    <image class = "play" src="/pages/images/pause.png" ></image>    
+  </view>
+
+</block>
 </view>
 
 <text> \n </text>
