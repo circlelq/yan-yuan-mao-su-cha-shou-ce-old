@@ -31,12 +31,9 @@
 /**跳转到相关到喵**/
 .itemname3 {
   font-size: 16px;
-  margin-left: 30rpx;
-  margin-bottom: 10rpx;
-  margin-top: 20rpx;
   display:flex;
   color:#3385c9;
-  font-weight:bold;
+  font-weight:normal;
   justify-content: flex-start;
 }
 
@@ -57,12 +54,12 @@
 
 .about {
   font-size: 16px;
-  margin-left: 30rpx;
+  margin-left: 40rpx;
   margin-right: 30rpx;
+  line-height:25px;
   margin-bottom: 20rpx;
   margin-top: 20rpx;
   color:#626262;
-  text-indent: 32px;
   text-align: left;
 }
 
@@ -131,4 +128,15 @@
  height: 60rpx;
  margin-right: 20rpx;
  border: none;
+}
+
+.staff {
+  font-size: 12px;
+  margin-left: 40rpx;
+  margin-right: 30rpx;
+  line-height:25px;
+  margin-bottom: 0rpx;
+  margin-top: -10rpx;
+  color:#62626298;
+  text-align: right;
 }

@@ -1,7 +1,7 @@
 Page({
 data: { 
  catlist: [
-{ name:"土谦"},{ name:"畅蠢"},{ name:"幺鸡"},{ name:"卤蛋"},{ name:"小蜜蜂"},{ name:"卡祖笛"},{ name:"山岚"},{ name:"果冻"},{ name:"鹅黄"},
+{ name:"土谦"},{ name:"畅蠢"},{ name:"幺鸡"},{ name:"卤蛋"},{ name:"小蜜蜂"},{ name:"卡祖笛"},{ name:"山岚"},{ name:"果冻"},{ name:"鹅黄"},{ name:"丑橘"},
     ],
     screenWidth: 0,
     screenHeight: 0,

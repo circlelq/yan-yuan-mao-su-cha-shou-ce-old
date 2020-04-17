@@ -110,6 +110,8 @@ for line in data_json:
 				if j[1] == '名字':
 					#print('{ name:"'+str(line[j[1]])+'"},')
 					continue
+				if j[0] == 22:
+					continue
 				if str(line[j[1]]) == '' or j[1] == '是否写入图鉴':
 					continue
 				#print(j[1] + " " + str(line[j[1]]))
@@ -132,7 +134,7 @@ for line in data_json:
 			# 后面的音频数
 
 			if line['是否加音频']:
-				audio = '//course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序音频/' + line['名字']
+				audio = '//pku-lostangel.oss-cn-beijing.aliyuncs.com/' + line['名字']
 				audio = urllib.parse.quote(audio)
 				f.write('audioArr: [\n')
 				for i in range(line['是否加音频']):
@@ -297,8 +299,4 @@ with open('dead/dead' + '.js', 'w') as f:
 	with open('js2.txt','r') as f2:
 		f.write(f2.read())
 
-
 print(lihua)
-
-
- 

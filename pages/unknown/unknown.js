@@ -1,7 +1,7 @@
 Page({
 data: { 
  catlist: [
-{ name:"花灵灵"},{ name:"豆干"},{ name:"天狗"},{ name:"李美人"},{ name:"牛黄"},{ name:"桂香"},{ name:"花袭人"},{ name:"白面"},{ name:"鸢尾"},{ name:"小芝麻"},{ name:"白泽"},{ name:"姜撞奶"},{ name:"芝麻糊"},
+{ name:"花灵灵"},{ name:"豆干"},{ name:"天狗"},{ name:"李美人"},{ name:"牛黄"},{ name:"桂香"},{ name:"花袭人"},{ name:"白面"},{ name:"鸢尾"},{ name:"小芝麻"},{ name:"白泽"},{ name:"雪竹"},{ name:"姜撞奶"},{ name:"芝麻糊"},
     ],
     screenWidth: 0,
     screenHeight: 0,
