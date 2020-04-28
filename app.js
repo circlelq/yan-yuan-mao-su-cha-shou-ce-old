@@ -43,4 +43,5 @@ wx.showShareMenu({
   withShareTicket: true
 })
 
-wx.setInnerAudioOption({ obeyMuteSwitch: false });//有效
+wx.setInnerAudioOption({ obeyMuteSwitch: false });
+

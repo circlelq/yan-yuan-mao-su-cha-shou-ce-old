@@ -89,6 +89,10 @@
 并且，若无救助管理，人类遗弃所致的流浪动物对城市生态环境具有一定的负面影响。为了我们共同的家园，请大家不在任何地方遗弃宠物，支持科学救助，用领养代替购买。
 </view>
 
+
+
+<!-- <text bindtap="saveImage" class="copy">北大猫协</text> -->
+
 <text> \n </text>
 
 <view class="staff">
@@ -100,6 +104,13 @@
 
 <view class="staff">
 供图：doradog、水云烟华等
+</view>
+
+<view class="about">
+由于流量过大，小程序中的图片已转至付费服务器，感谢大家的支持。
+<navigator url="/pages/donate/donate" >
+<text class="copy">打赏链接</text>
+</navigator>
 </view>
 
 <text> \n </text>
