@@ -3,9 +3,7 @@
     "pages/index/index",
     "pages/about/about",
     "pages/logs/logs",
-    "pages/fostered/fostered",
-    "pages/dead/dead",
-    "pages/unknown/unknown"
+    "pages/science/science"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,23 +14,21 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
+    "selectedColor":"#94070a",
     "list": [
       {
-        "text": "在校",
+        "text": "查猫",
         "pagePath": "pages/index/index"
       },
       {
-        "text": "毕业",
-        "pagePath": "pages/fostered/fostered"
+        "text": "科普",
+        "pagePath": "pages/science/science"
       },
       {
-        "text": "休学",
-        "pagePath": "pages/unknown/unknown"
-      },
-      {
-        "text": "喵星",
-        "pagePath": "pages/dead/dead"
+        "text": "关于",
+        "pagePath": "pages/about/about"
       }
     ]
   }
+
 }

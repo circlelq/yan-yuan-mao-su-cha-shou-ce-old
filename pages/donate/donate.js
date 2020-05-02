@@ -5,7 +5,9 @@ Page({
     screenWidth: 0,
     screenHeight: 0,
     imgwidth: 0,
-    imgheight: 0
+    imgheight: 0,
+    imgalist: ['https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/donate.jpeg',
+    ]
   },
   //转发功能
   onShareAppMessage: function () {
@@ -28,16 +30,12 @@ Page({
     }
   })
   },
-  saveImage: function(){
 
-    wx.saveImageToPhotosAlbum({
-      filePath: "/pages/images/huihui.jpg",
-      success(res) {
-        console.log("success");
-      },
-      fail: function (res) {
-        console.log(res);
-      }
+  previewImage: function (e) {
+    var current = e.target.dataset.src;
+    wx.previewImage({
+      current: current, // 当前显示图片的http链接
+      urls: this.data.imgalist // 需要预览的图片http链接列表
     })
   }
 })

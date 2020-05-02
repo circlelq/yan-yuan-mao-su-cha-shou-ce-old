@@ -15,15 +15,15 @@
   margin-bottom: 10rpx;
   margin-top: 20rpx;
   display:flex;
-  color:#626262;
-  font-weight:bold;
+  color:#888888;
+  /* font-weight:bold; */
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 .itemname2 {
   font-size: 16px;
-  color:#626262;
+  color:#353535;
   font-weight:normal;
   margin-right: 20rpx;
 }
@@ -32,7 +32,7 @@
 .itemname3 {
   font-size: 16px;
   display:flex;
-  color:#3385c9;
+  color:#576b95;
   font-weight:normal;
   justify-content: flex-start;
 }
@@ -43,23 +43,35 @@
   align-items: center;
 }
 
-.catname {
+.title {
   font-size: 22px;
   text-align: center;
-  margin-top: 20rpx;
+  margin-top: 30rpx;
   margin-right: 10rpx;
-  margin-bottom: 20rpx;
+  margin-bottom: 30rpx;
   font-weight:bold;
 }
 
-.about {
+.head1 {
+  font-size: 19px;
+  margin-left: 40rpx;
+  margin-right: 30rpx;
+  line-height:25px;
+  margin-bottom: 20rpx;
+  margin-top: 30rpx;
+  font-weight:bold;
+  color:black;
+  text-align: left;
+}
+
+.body {
   font-size: 16px;
   margin-left: 40rpx;
   margin-right: 30rpx;
   line-height:25px;
   margin-bottom: 20rpx;
   margin-top: 20rpx;
-  color:#626262;
+  color:#353535;
   text-align: left;
 }
 
@@ -100,13 +112,9 @@
 /*搜索框*/
 .search{
   font-size: 1rem;
-  align-items: center;
-  display:flex;
-  flex-direction:row;
+  position: absolute;
   margin-left: 5rem;
-  margin-bottom: 10rpx;
-  margin-top: 10rpx;
-  color:black;
+  margin-top: 0.7rem;
 }
 
 .avator {
@@ -119,7 +127,7 @@
 }
 
 .copy{
-  color: #3385c9;
+  color: #576b95;
 }
 
 .play{
@@ -133,10 +141,15 @@
 .staff {
   font-size: 12px;
   margin-left: 40rpx;
-  margin-right: 30rpx;
+  margin-right: 40rpx;
   line-height:25px;
   margin-bottom: 0rpx;
   margin-top: -10rpx;
-  color:#62626298;
+  color:#888888;
   text-align: right;
+}
+
+.cat_image {
+    border-radius: 5px;
+    overflow: hidden;
 }

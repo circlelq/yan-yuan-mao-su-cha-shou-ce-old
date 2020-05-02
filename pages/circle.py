@@ -134,7 +134,7 @@ for line in data_json:
 			# 后面的音频数
 
 			if line['是否加音频']:
-				audio = '//pku-lostangel.oss-cn-beijing.aliyuncs.com/' + line['名字']
+				audio = '//course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序音频/' + line['名字']
 				audio = urllib.parse.quote(audio)
 				f.write('audioArr: [\n')
 				for i in range(line['是否加音频']):
@@ -267,36 +267,27 @@ with open('index/所有/所有' + '.js', 'w') as f:
 
 #创建状态分类的js文件
 #送养
-if not os.path.exists('fostered'):
-	os.makedirs('fostered')#创建每只猫的文件夹
-		#创建js文件
-with open('fostered/fostered' + '.js', 'w') as f:
-	f.write( 'Page({\ndata: { \n catlist: [\n')
+
+with open('index/index' + '.js', 'w') as f:
+	f.write( 'Page({\ndata: { \n')
+	# fostered
+	f.write( ' fostered_catlist: [\n')
 	for name in fostered:
-		f.write('{ name:"'+name+'"},')
-	with open('js2.txt','r') as f2:
-		f.write(f2.read())
-
-#未知
-if not os.path.exists('unknown'):
-	os.makedirs('unknown')#创建每只猫的文件夹
-		#创建js文件
-with open('unknown/unknown' + '.js', 'w') as f:
-	f.write( 'Page({\ndata: { \n catlist: [\n')
+		f.write('{ name:"'+name+'"},\n')
+	f.write( '],\n')
+	# unknown
+	f.write( ' unknown_catlist: [\n')
 	for name in unknown:
-		f.write('{ name:"'+name+'"},')
-	with open('js2.txt','r') as f2:
+		f.write('{ name:"'+name+'"},\n')
+	f.write( '],\n')
+	# dead
+	f.write( ' dead_catlist: [\n')
+	for name in dead:
+		f.write('{ name:"'+name+'"},\n')
+	f.write( '],\n')		
+	with open('js_index.txt','r') as f2:
 		f.write(f2.read())
 
-#离世
-if not os.path.exists('dead'):
-	os.makedirs('dead')#创建每只猫的文件夹
-		#创建js文件
-with open('dead/dead' + '.js', 'w') as f:
-	f.write( 'Page({\ndata: { \n catlist: [\n')
-	for name in dead:
-		f.write('{ name:"'+name+'"},')
-	with open('js2.txt','r') as f2:
-		f.write(f2.read())
+
 
 print(lihua)

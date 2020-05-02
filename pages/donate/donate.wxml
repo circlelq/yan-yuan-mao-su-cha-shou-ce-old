@@ -1,15 +1,2 @@
-<!--index.wxml-->
 
-<view class= "catname">北京大学流浪猫关爱协会</view>
-
-  <image mode="widthFix" display="flex" justify-content="center" src="/pages/images/donate.jpeg" style= "width: 100%;">
-  </image>
-
-
-<text> \n </text>
-
-<view class="about">
-由于开发同学的时间和能力有限，请您截屏后再扫此二维码。
-</view>
-
-<text> \n </text>
+<web-view src="https://mp.weixin.qq.com/s/ZlbsiTapJHmxUSz31dKqZw"> </web-view>

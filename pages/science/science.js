@@ -1,13 +1,14 @@
 Page({
 data: { 
- catlist: [
-{ name:"小菊"},{ name:"滑板爸"},{ name:"锦缎"},{ name:"安吉"},{ name:"半糖"},
-    ],
-    screenWidth: 0,
-    screenHeight: 0,
-    imgwidth: 0,
-    imgheight: 0
+  navbar: ['喂食', '疾病', '领养', '绝育', '撸猫'],
+  currentTab: 0,
   },
+  navbarTap: function (e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
+  },
+
 
   onPullDownRefresh:function(){
     wx.stopPullDownRefresh()
@@ -16,7 +17,6 @@ data: {
   //转发跳转页面设置
   onLoad: function (options) {
     if (options.pageId) {
-      //这个pageId的值存在则证明首页的开启来源于用户点击来首页,同时可以通过获取到的pageId的值跳转导航到对应的详情页
       wx.navigateTo({
         url: '/pages/cats/' + options.pageId + '/' + options.pageId,
       })
@@ -41,17 +41,6 @@ data: {
       }
     }
   },
-
-  // 搜索栏输入名字后页面跳转
-  bindconfirmT: function (e) {
-    console.log("e.detail.value");
-    if(e.detail.value) {
-    //这个pageId的值存在则证明首页的开启来源于用户点击来首页,同时可以通过获取到的pageId的值跳转导航到对应的详情页
-    wx.navigateTo({
-      url: '/pages/cats/' + e.detail.value + '/' + e.detail.value,
-    })
-  }
-  }
 
 
 })

@@ -1,32 +1,31 @@
 <!--index.wxml-->
-<view class= "catname">北京大学流浪猫关爱协会</view>
 
+<image  class = 'avator ' src="/pages/images/huihui_circle.png" mode='aspectFill' ></image>
+<view class="search">
+<input placeholder="请输入猫咪名称" bindconfirm="bindconfirmT" auto-focus/>
+</view>
 
-<navigator url="/pages/about/about" >
+<text> \n\n\n </text>
+
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+
+<!-- 在校 -->
+<view hidden="{{currentTab!==0}}">
+  
+<!-- <navigator url="/pages/about/about" >
   <view style="display:flex; justify-content:center; align-items:center;">
     <image mode="widthFix" src="/pages/images/huihui.jpg" style= "width: 93%;">
     </image>
   </view>
-</navigator>
+</navigator> -->
 
 <text> \n </text>
 
-
-
-<view class="catitem">
-  <view class="avator">
-    <icon type="search" size="37" />
-  </view>
-  <view class="search">
-  <input placeholder="请输入猫咪名称" bindconfirm="bindconfirmT" auto-focus/>
-  </view>
-</view>
-
-<view class="divLine"></view>
-
 <navigator url="/pages/index/玳瑁及三花/玳瑁及三花" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/花灵灵_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/花灵灵_circle.png" mode='aspectFill' ></image>
     <view class="cat-name">三花和玳瑁</view> 
   </view>
 </navigator>
@@ -35,7 +34,7 @@
 
 <navigator url="/pages/index/纯色/纯色" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/薏米_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/薏米_circle.png" mode='aspectFill' ></image>
     <view class= "cat-name">纯色</view>
   </view>
 </navigator>
@@ -44,7 +43,7 @@
 
 <navigator url="/pages/index/橘猫及橘白/橘猫及橘白" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/畅蠢_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/畅蠢_circle.png" mode='aspectFill' ></image>
     <view class= "cat-name">橘猫和橘白</view>
   </view>
 </navigator>
@@ -53,7 +52,7 @@
 
 <navigator url="/pages/index/奶牛/奶牛" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/英杰_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/英杰_circle.png" mode='aspectFill' ></image>
     <view class= "cat-name">奶牛</view>
   </view>
 </navigator>
@@ -62,7 +61,7 @@
 
 <navigator url="/pages/index/狸花/狸花" >
   <view class="catitem">
-    <image  class = 'avator ' src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/山竹_circle.png" mode='aspectFill' ></image>
+    <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/山竹_circle.png" mode='aspectFill' ></image>
     <view class= "cat-name">狸花</view>
   </view>
 </navigator>
@@ -80,37 +79,54 @@
 
 <text> \n </text>
 
-<view class="about">
-流浪不是猫的归宿，北大也不是流浪猫的天堂。尽管同学们努力照料，由于车祸、伤病、犬咬等原因，北大校内的流浪猫仍然经常离我们而去，这是流浪生活的常态，其中一些故事可以在【<text bindtap="copyTBL" class="copy">北大猫协</text>】公众号后台回复【日光】查看。
 </view>
-
-<view class="about">
-
-并且，若无救助管理，人类遗弃所致的流浪动物对城市生态环境具有一定的负面影响。为了我们共同的家园，请大家不在任何地方遗弃宠物，支持科学救助，用领养代替购买。
-</view>
-
-
-
-<!-- <text bindtap="saveImage" class="copy">北大猫协</text> -->
+ 
+<!-- 毕业 -->
 
 <text> \n </text>
 
-<view class="staff">
-小程序开发：circle
+<view hidden="{{currentTab!==1}}">
+  <block wx:for="{{fostered_catlist}}">
+  <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
+    <view class="catitem">
+      <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <view class= "cat-name">{{item.name}}</view> 
+    </view>
+  </navigator>
+
+  <view class="divLine"></view>
+  
+</block>
 </view>
 
-<view class="staff">
-猫咪资料统计：橙子じん等</view>
+<!-- 休学 -->
 
-<view class="staff">
-供图：doradog、水云烟华等
+<view hidden="{{currentTab!==2}}">
+    <block wx:for="{{unknown_catlist}}">
+  <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
+    <view class="catitem">
+      <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <view class= "cat-name">{{item.name}}</view> 
+    </view>
+  </navigator>
+
+  <view class="divLine"></view>
+  
+</block>
 </view>
 
-<view class="about">
-由于流量过大，小程序中的图片已转至付费服务器，感谢大家的支持。
-<navigator url="/pages/donate/donate" >
-<text class="copy">打赏链接</text>
-</navigator>
-</view>
+<!-- 喵星 -->
 
-<text> \n </text>
+<view hidden="{{currentTab!==3}}">
+    <block wx:for="{{dead_catlist}}">
+  <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
+    <view class="catitem">
+      <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <view class= "cat-name">{{item.name}}</view> 
+    </view>
+  </navigator>
+
+  <view class="divLine"></view>
+  
+</block>
+</view>
