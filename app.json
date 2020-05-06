@@ -15,6 +15,7 @@
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "selectedColor":"#94070a",
+    "color": "#888888",
     "list": [
       {
         "text": "查猫",

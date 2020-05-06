@@ -13,6 +13,7 @@ page{
   flex: auto;
   text-align: center;
   line-height: 80rpx;
+  color: #888888;
 }
 .navbar .item.active{
   color: #94070a;

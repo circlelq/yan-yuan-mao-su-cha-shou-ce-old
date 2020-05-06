@@ -45,6 +45,8 @@
 
 <text> \n </text>
 
+<view class="staff">2020-05-06</view>
+
 <view class="staff">
 小程序开发：circle
 </view>
@@ -56,4 +58,7 @@
 供图：doradog、水云烟华等
 </view>
 
+
 <text> \n </text>
+
+<!-- <button open-type='feedback' type='primary'>意见反馈</button> -->

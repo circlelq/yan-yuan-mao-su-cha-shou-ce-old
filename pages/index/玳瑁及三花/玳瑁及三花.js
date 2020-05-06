@@ -1,7 +1,7 @@
 Page({
 data: { 
  catlist: [
-{ name:"鱼豆腐"},{ name:"冒菜妈"},{ name:"大威"},{ name:"焦糖"},{ name:"青天"},{ name:"花洒"},{ name:"麒麟"},
+{ name:"鱼豆腐"},{ name:"冒菜妈"},{ name:"大威"},{ name:"焦糖"},{ name:"青天"},{ name:"花洒"},{ name:"麒麟"},{ name:"山花"},
     ],
     screenWidth: 0,
     screenHeight: 0,

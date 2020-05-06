@@ -32,6 +32,15 @@
 
 <view class="divLine"></view>
 
+<navigator url="/pages/index/橘猫及橘白/橘猫及橘白" >
+  <view class="catitem">
+    <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/畅蠢_circle.png" mode='aspectFill' ></image>
+    <view class= "cat-name">橘猫和橘白</view>
+  </view>
+</navigator>
+
+<view class="divLine"></view>
+
 <navigator url="/pages/index/纯色/纯色" >
   <view class="catitem">
     <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/薏米_circle.png" mode='aspectFill' ></image>
@@ -39,14 +48,6 @@
   </view>
 </navigator>
 
-<view class="divLine"></view>
-
-<navigator url="/pages/index/橘猫及橘白/橘猫及橘白" >
-  <view class="catitem">
-    <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/畅蠢_circle.png" mode='aspectFill' ></image>
-    <view class= "cat-name">橘猫和橘白</view>
-  </view>
-</navigator>
 
 <view class="divLine"></view>
 
@@ -89,7 +90,7 @@
   <block wx:for="{{fostered_catlist}}">
   <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
     <view class="catitem">
-      <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <image  class = 'avator ' lazy-load src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{item.name}}_circle.png" mode='aspectFill' ></image>
       <view class= "cat-name">{{item.name}}</view> 
     </view>
   </navigator>
@@ -105,7 +106,7 @@
     <block wx:for="{{unknown_catlist}}">
   <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
     <view class="catitem">
-      <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <image  class = 'avator ' lazy-load src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{item.name}}_circle.png" mode='aspectFill' ></image>
       <view class= "cat-name">{{item.name}}</view> 
     </view>
   </navigator>
@@ -121,7 +122,7 @@
     <block wx:for="{{dead_catlist}}">
   <navigator url="/pages/cats/{{item.name}}/{{item.name}}" >
     <view class="catitem">
-      <image  class = 'avator ' src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{item.name}}_circle.png" mode='aspectFill' ></image>
+      <image  class = 'avator ' lazy-load src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{item.name}}_circle.png" mode='aspectFill' ></image>
       <view class= "cat-name">{{item.name}}</view> 
     </view>
   </navigator>
