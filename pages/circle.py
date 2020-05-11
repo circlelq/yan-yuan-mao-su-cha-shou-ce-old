@@ -66,11 +66,12 @@ labels = [
 	[11, '绝育时间', lambda x:str(x)],
 	[12, '出生时间', lambda x:x],
 	[14, '性格', lambda x: '亲人可抱' if x == 6 else '亲人不可抱 可摸' if x == 5 else '薛定谔亲人' if x == 4 else '吃东西时可以一直摸' if x == 3 else '吃东西时可以摸一下' if x == 2 else '怕人 安全距离1m以内' if x == 1 else '怕人 安全距离1m以外' if x == 0 else '未知 数据缺失' ],
-	[15, '第一次被目击时间', lambda x: str(x)],
-	[17, '关系', lambda x: str(x)],
+	[15, '第一次目击', lambda x: str(x)],
 	[20, '送养时间', lambda x:str(x)],
+	[21, '离世时间', lambda x:x],
 	[13, '外貌', lambda x:x],
-	[22, '是否加音频', lambda x:x]
+	[17, '关系', lambda x: str(x)],
+	[23, '是否加音频', lambda x:x]
 ]
 
 data_json = []
@@ -111,15 +112,12 @@ for line in data_json:
 				if j[1] == '名字':
 					# print('{ name:"'+str(line[j[1]])+'"},')
 					continue
-				if j[0] == 22:
+				if j[0] == 23:
 					continue
 				if str(line[j[1]]) == '' or j[1] == '是否写入图鉴':
 					continue
 				# print(j[1] + " " + str(line[j[1]]))
 				f.write('{category:"' + j[1] + '",\n content:" ' + str(line[j[1]]) + '",},\n')
-
-			# 编写日期
-			# f.write('{category:"编写日期",\n content:" ' + today + '",},')
 			f.write('\n], \n')
 			# 增加关系跳转项
 			f.write('relationship:[')
@@ -132,7 +130,7 @@ for line in data_json:
 			for i in range(int(line['是否写入图鉴'])):
 				f.write( '{ ' + 'num: {} '.format(i+1) + '},\n')
 			f.write( '],\n')
-			#  后面的音频数
+			#  音频数
 			if line['是否加音频']:
 				audio = '//course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序音频/' + line['名字']
 				audio = urllib.parse.quote(audio)
@@ -175,7 +173,7 @@ suoyou = []
 for i in range(rowNum):
 	if data_list[i][3] != '':
 		if data_list[i][9] == '离世':
-			dead.append(data_list[i][2])
+			dead.append((data_list[i][2],data_list[i][21]))
 		if data_list[i][9] == '送养':
 			fostered.append((data_list[i][2],data_list[i][20]))
 		if (data_list[i][9] == '不明' or data_list[i][9] == '许久未见'or data_list[i][9] == '失踪') and data_list[i][2] != '花灵灵':
@@ -199,6 +197,9 @@ suoyou = health
 
 # 调整寄养的时间顺序
 fostered = sorted(fostered, key=lambda student: student[1], reverse=True)
+
+# 调整离世的时间顺序
+dead = sorted(dead, key=lambda student: student[1], reverse=True)
 
 
 # 创建毛色分类的js文件
@@ -284,7 +285,7 @@ with open('index/index' + '.js', 'w') as f:
 	#  dead
 	f.write( ' dead_catlist: [\n')
 	for name in dead:
-		f.write('{ name:"'+name+'"},\n')
+		f.write('{ name:"'+name[0]+'"},\n')
 	f.write( '],\n')		
 	with open('js_index.txt','r') as f2:
 		f.write(f2.read())

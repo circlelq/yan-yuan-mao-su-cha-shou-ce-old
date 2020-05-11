@@ -23,8 +23,13 @@ page{
   display: block;
   position: absolute;
   bottom: 0;
-  left: 1rem;
-  right: 1rem;
+  left: 40rpx;
+  right: 40rpx;
   height: 4rpx;
   background: #94070a;
+}
+
+.placeholder {
+  color: #888888;
+  caret-color: #94070a;
 }
