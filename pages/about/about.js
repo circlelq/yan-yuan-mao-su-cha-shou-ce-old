@@ -12,6 +12,7 @@ Page({
     let users = wx.getStorageSync('user');
     if (res.from === 'button') { }
     return {
+      path: 'pages/about/about',  // 路径，传递参数到指定页面。
       success: function (res) { }
     }
   },

@@ -82,7 +82,9 @@
       console.log(res.target)
     }
     return {
-      path: '/pages/index/index?pageId='+this.data.catname,//这里在首页的地址后面添加我们需要传值的标识位pageId以及值123(pageId 这个名字你们可以自己随便乱取 如同一个变量名)
+      title: this.data.catname,
+      path: '/pages/index/index?pageId='+this.data.catname,
+      // imageUrl: 'https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/'+this.data.catname+'.jpg',
       success: function (res) {
         // 转发成功
       },

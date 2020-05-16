@@ -65,7 +65,10 @@
   color:#353535;
   letter-spacing: 5rpx;
   line-height: 55rpx;
+  text-align: justify;
 }
+
+
 
 .bodybold {
   font-weight:bold;

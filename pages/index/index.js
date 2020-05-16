@@ -1,6 +1,7 @@
 Page({
 data: { 
  fostered_catlist: [
+{ name:"杰希"},
 { name:"丑橘"},
 { name:"芬达"},
 { name:"果冻"},
@@ -17,6 +18,8 @@ data: {
 { name:"sin"},
 { name:"cos"},
 { name:"金银朱"},
+{ name:"金平糖"},
+{ name:"金闪闪"},
 { name:"木糖"},
 { name:"乌糖"},
 { name:"嘤宝"},
