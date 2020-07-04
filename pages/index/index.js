@@ -2,6 +2,8 @@ Page({
 data: { 
  fostered_catlist: [
 { name:"杰希"},
+{ name:"小黄鸭"},
+{ name:"尘尘"},
 { name:"丑橘"},
 { name:"芬达"},
 { name:"果冻"},
@@ -23,7 +25,11 @@ data: {
 { name:"木糖"},
 { name:"乌糖"},
 { name:"嘤宝"},
+{ name:"白露"},
+{ name:"雪媚娘"},
 { name:"小一"},
+{ name:"雪梨"},
+{ name:"泡泡"},
 { name:"咖喱"},
 { name:"鹅黄"},
 { name:"小米"},
@@ -81,7 +87,6 @@ data: {
   //转发跳转页面设置
   onLoad: function (options) {
     if (options.pageId) {
-      //这个pageId的值存在则证明首页的开启来源于用户点击来首页,同时可以通过获取到的pageId的值跳转导航到对应的详情页
       wx.navigateTo({
         url: '/pages/cats/' + options.pageId + '/' + options.pageId,
       })
@@ -111,7 +116,6 @@ data: {
   bindconfirmT: function (e) {
     console.log("e.detail.value");
     if(e.detail.value) {
-    //这个pageId的值存在则证明首页的开启来源于用户点击来首页,同时可以通过获取到的pageId的值跳转导航到对应的详情页
     wx.navigateTo({
       url: '/pages/cats/' + e.detail.value + '/' + e.detail.value,
     })

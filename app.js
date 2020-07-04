@@ -63,10 +63,6 @@ App({
     })
   },
 
-  globalData: {
-    userInfo: null
-  },
-  
 
 })
 
@@ -75,4 +71,3 @@ wx.showShareMenu({
 })
 
 wx.setInnerAudioOption({ obeyMuteSwitch: false });
-

@@ -12,7 +12,7 @@
 
 <view style="display:flex; justify-content:center; align-items:center;">
 
-  <image mode="widthFix" class="cat_image" src="https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/{{catname}}{{item.num}}1.jpg" style= "width: 93%;">
+  <image mode="widthFix" class="cat_image" src="https://pku-lostangel.oss-cn-beijing.aliyuncs.com/{{catname}}{{item.num}}1.jpg" style= "width: 93%;">
 
   </image>
 
