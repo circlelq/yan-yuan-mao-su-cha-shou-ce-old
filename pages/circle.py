@@ -70,8 +70,9 @@ labels = [
 	[20, '送养时间', lambda x:str(x)],
 	[21, '离世时间', lambda x:x],
 	[13, '外貌', lambda x:x],
+	[24, '更多', lambda x:x],
 	[17, '关系', lambda x: str(x)],
-	[23, '是否加音频', lambda x:x]
+	[23, '是否加音频', lambda x:x],
 ]
 
 data_json = []
