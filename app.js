@@ -66,6 +66,9 @@ App({
 
 })
 
-
+wx.showShareMenu({
+  withShareTicket: true,
+  menus: ['shareAppMessage', 'shareTimeline'],
+})
 
 wx.setInnerAudioOption({ obeyMuteSwitch: false });

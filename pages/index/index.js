@@ -86,10 +86,6 @@ data: {
 
   //转发跳转页面设置
   onLoad: function (options) {
-    wx.showShareMenu({
-      withShareTicket: true,
-      menus: ['shareAppMessage', 'shareTimeline'],
-    })
     if (options.pageId) {
       wx.navigateTo({
         url: '/pages/cats/' + options.pageId + '/' + options.pageId,

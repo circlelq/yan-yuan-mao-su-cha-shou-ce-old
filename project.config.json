@@ -21,10 +21,11 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
+		"useIsolateContext": true,
 		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
-	"compileType": "plugin",
+	"compileType": "miniprogram",
 	"libVersion": "2.8.1",
 	"appid": "wx176cdf19e4cadaaf",
 	"projectname": "miniprogram-2",

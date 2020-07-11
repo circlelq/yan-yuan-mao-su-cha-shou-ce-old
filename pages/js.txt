@@ -84,7 +84,23 @@
     return {
       title: this.data.catname,
       path: '/pages/index/index?pageId='+this.data.catname,
-      // imageUrl: 'https://course.pku.edu.cn/bbcswebdav/users/1600011084/猫协小程序图片/'+this.data.catname+'.jpg',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  },
+
+  onShareTimeline: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: this.data.catname,
+      path: '/pages/index/index?pageId='+this.data.catname,
       success: function (res) {
         // 转发成功
       },
