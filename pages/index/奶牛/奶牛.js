@@ -1,7 +1,7 @@
 Page({
 data: { 
  catlist: [
-{ name:"英杰"},{ name:"一帆"},{ name:"二哈"},{ name:"蒙牛"},{ name:"小雨点"},{ name:"墨方"},{ name:"墨可"},{ name:"墨斜"},
+{ name:"英杰"},{ name:"一帆"},{ name:"二哈"},{ name:"蒙牛"},{ name:"墨方"},{ name:"墨可"},{ name:"墨斜"},
     ],
     screenWidth: 0,
     screenHeight: 0,

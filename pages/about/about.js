@@ -39,7 +39,8 @@ Page({
   onPullDownRefresh: function () {
     wx.stopPullDownRefresh()
   },
-  copyTBL: function (e) {
+
+  copy1: function (e) {
   var self = this;
   wx.setClipboardData({
     data: '北大猫协',//需要复制的内容
@@ -48,7 +49,18 @@ Page({
      
     }
   })
-  }
+  },
+
+  copy2: function (e) {
+    var self = this;
+    wx.setClipboardData({
+      data: 'https://github.com/SCCAPKU/miniprogram',//需要复制的内容
+      success: function (res) {
+        // self.setData({copyTip:true}),
+       
+      }
+    })
+    }
   
 })
 
