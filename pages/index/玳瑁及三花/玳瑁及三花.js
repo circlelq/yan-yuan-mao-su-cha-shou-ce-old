@@ -1,7 +1,7 @@
 Page({
 data: { 
  catlist: [
-{ name:"鱼豆腐"},{ name:"冒菜妈"},{ name:"大威"},{ name:"焦糖"},{ name:"青天"},{ name:"花洒"},{ name:"麒麟"},{ name:"山花"},
+{ name:"冒菜妈"},{ name:"大威"},{ name:"焦糖"},{ name:"青天"},{ name:"花洒"},{ name:"麒麟"},{ name:"山花"},{ name:"秋云"},{ name:"野分"},{ name:"爱智"},{ name:"碎月"},{ name:"北极贝"},{ name:"德尔菲"},{ name:"雷雨"},
     ],
     screenWidth: 0,
     screenHeight: 0,

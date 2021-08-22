@@ -1,6 +1,10 @@
 Page({
 data: { 
  fostered_catlist: [
+{ name:"战车"},
+{ name:"唐璜"},
+{ name:"山茶"},
+{ name:"美学"},
 { name:"小黄鸭"},
 { name:"杰希"},
 { name:"尘尘"},
@@ -35,6 +39,7 @@ data: {
 { name:"咖喱"},
 { name:"鹅黄"},
 { name:"小米"},
+{ name:"花彩彩"},
 { name:"甜橙"},
 { name:"花木兰"},
 { name:"七七"},
@@ -42,13 +47,15 @@ data: {
  unknown_catlist: [
 { name:"花灵灵"},
 { name:"豆干"},
-{ name:"棉花糖"},
-{ name:"天狗"},
+{ name:"小礼"},
+{ name:"八筒"},
+{ name:"鱼豆腐"},
 { name:"李美人"},
 { name:"牛黄"},
 { name:"桂香"},
 { name:"花袭人"},
 { name:"白面"},
+{ name:"蒙牛"},
 { name:"鸢尾"},
 { name:"小芝麻"},
 { name:"白泽"},
@@ -57,6 +64,7 @@ data: {
 { name:"芝麻糊"},
 ],
  dead_catlist: [
+{ name:"小狐狸"},
 { name:"小雨点"},
 { name:"左斑"},
 { name:"栗子"},

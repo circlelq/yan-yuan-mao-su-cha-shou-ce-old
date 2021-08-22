@@ -1,7 +1,7 @@
 Page({
 data: { 
  catlist: [
-{ name:"小礼"},{ name:"毛巾"},{ name:"大盘鸡"},{ name:"砂糖橘"},{ name:"姜丝鸭"},{ name:"大哥"},{ name:"第谷"},{ name:"小尾巴"},{ name:"牛牛"},{ name:"奶酪"},{ name:"黄埔"},{ name:"小狐狸"},{ name:"唢呐"},{ name:"帖木儿"},{ name:"咸蛋黄"},{ name:"小橘子"},{ name:"黄大孙女"},{ name:"杜若"},
+{ name:"毛巾"},{ name:"大盘鸡"},{ name:"砂糖橘"},{ name:"姜丝鸭"},{ name:"大哥"},{ name:"第谷"},{ name:"小尾巴"},{ name:"牛牛"},{ name:"奶酪"},{ name:"黄埔"},{ name:"唢呐"},{ name:"帖木儿"},{ name:"咸蛋黄"},{ name:"小橘子"},{ name:"黄大孙女"},{ name:"冬笋"},{ name:"杜若"},{ name:"香波"},{ name:"虾球"},{ name:"夕云"},{ name:"虾滑"},{ name:"二姐夫"},{ name:"二姐"},{ name:"三姐"},{ name:"四哥"},{ name:"五哥"},
     ],
     screenWidth: 0,
     screenHeight: 0,

@@ -1,7 +1,7 @@
 Page({
 data: { 
  catlist: [
-{ name:"英杰"},{ name:"一帆"},{ name:"二哈"},{ name:"蒙牛"},{ name:"墨方"},{ name:"墨可"},{ name:"墨斜"},
+{ name:"英杰"},{ name:"一帆"},{ name:"二哈"},{ name:"大奶牛"},{ name:"墨方"},{ name:"墨可"},{ name:"墨斜"},{ name:"仙草"},{ name:"太郎"},{ name:"琉青"},{ name:"英仙"},
     ],
     screenWidth: 0,
     screenHeight: 0,

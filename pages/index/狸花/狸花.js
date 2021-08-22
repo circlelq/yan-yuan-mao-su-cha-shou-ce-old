@@ -1,7 +1,7 @@
 Page({
 data: { 
  catlist: [
-{ name:"出竹"},{ name:"麻糖"},{ name:"麻薯"},{ name:"山竹"},{ name:"黑米粥"},{ name:"云雾"},{ name:"战车"},
+{ name:"出竹"},{ name:"麻糖"},{ name:"麻薯"},{ name:"山竹"},{ name:"黑米粥"},{ name:"云雾"},{ name:"竹妹"},{ name:"秋梨膏"},{ name:"面粉"},{ name:"丛云"},{ name:"灰灰"},{ name:"龟苓膏"},{ name:"岭北"},{ name:"漠北"},{ name:"楚天阔"},
     ],
     screenWidth: 0,
     screenHeight: 0,

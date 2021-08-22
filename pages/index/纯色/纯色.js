@@ -1,7 +1,7 @@
 Page({
 data: { 
  catlist: [
-{ name:"薏米"},{ name:"夜色"},{ name:"小钒"},{ name:"八筒"},{ name:"藕黑"},{ name:"藕白"},{ name:"茶叶蛋"},
+{ name:"薏米"},{ name:"棉花糖"},{ name:"小钒"},{ name:"藕黑"},{ name:"藕白"},{ name:"吹雪"},{ name:"茶叶蛋"},{ name:"雪风"},{ name:"深雪"},{ name:"朝雾"},{ name:"迷雾"},
     ],
     screenWidth: 0,
     screenHeight: 0,
