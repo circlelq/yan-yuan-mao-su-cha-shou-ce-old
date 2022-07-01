@@ -1,2 +1,3 @@
 #忽略cat文件夹下的文件
-/pages/cats/*
+/miniprogram/pages/cats/**
+.DS_Store
