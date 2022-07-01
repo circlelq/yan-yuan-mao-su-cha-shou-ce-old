@@ -1,0 +1,34 @@
+<!--index.wxml-->
+
+<view class= "title">北京大学学生流浪猫关爱协会</view>
+<navigator url="/pages/about/web/web">
+<view style="display:flex; justify-content:center; align-items:center;">
+  <image mode="widthFix" src="/pages/images/huihui.jpg" style= "width: 93%;">
+  </image>
+</view>
+</navigator>
+
+<text> \n </text>
+
+<!-- 最好能保留这一行 -->
+<view class="body">此小程序所有代码开源，可在 gitee.com 上搜索「北大猫咪图鉴」，或者点击复制<text bindtap="copyTBL" class="copy">链接</text>并在浏览器粘贴打开。教程配有教学视频，简单易用。 </view>
+
+
+<text> \n </text>
+
+<view class="staff">2022-02-18</view>
+
+<view class="staff">
+小程序开发：circle
+</view>
+
+<view  class = "itemname1">
+  <view bindtap="naviToMini" style='flex-shrink:0; box-sizing:border-box; width:3rem; margin-right:1rem;'>
+    <image style="width:3rem;height:3rem;" src="/pages/images/circle.png" ></image>
+    <view style="text-align: center;  color:#353535;" > \n 高校动保索引 </view>  
+  </view>
+</view>
+
+
+<text> \n </text>
+
