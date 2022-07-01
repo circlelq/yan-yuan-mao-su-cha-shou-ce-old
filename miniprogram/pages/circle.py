@@ -31,7 +31,7 @@ for i in range(12, rowNum):
         rowlist.append(cell)
     data_list.append(rowlist)
 
-print(colNum)
+# print(data_list)
 
 
 #  输出所有单元格的内容
@@ -114,7 +114,7 @@ for line in data_json:
                 if j[1] == '名字':
                     print(str(line[j[1]]))
                     continue
-                if j[0] == 23 or j[0] == 24:
+                if j[0] == 23:
                     continue
                 if str(line[j[1]]) == '' or j[1] == '是否写入图鉴':
                     continue

@@ -11,7 +11,7 @@
 <text> \n </text>
 
 <!-- 最好能保留这一行 -->
-<view class="body">此小程序所有代码开源，可在 gitee.com 上搜索「北大猫咪图鉴」，或者点击复制<text bindtap="copyTBL" class="copy">链接</text>并在浏览器粘贴打开。教程配有教学视频，简单易用。 </view>
+<view class="body">此小程序所有代码开源，可在 GitHub 上搜索「北大猫协」，配有教学视频，简单易用。 </view>
 
 
 <text> \n </text>

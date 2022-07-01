@@ -126,7 +126,6 @@
 
 .copy{
   color: #576b95;
-  font-weight:bold;
 }
 
 .play{
