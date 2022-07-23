@@ -1,12 +1,10 @@
 <!--index.wxml-->
 
 <view class= "title">北京大学学生流浪猫关爱协会</view>
-<navigator url="/pages/about/web/web">
 <view style="display:flex; justify-content:center; align-items:center;">
   <image mode="widthFix" src="/pages/images/huihui.jpg" style= "width: 93%;">
   </image>
 </view>
-</navigator>
 
 <text> \n </text>
 
@@ -16,7 +14,7 @@
 
 <text> \n </text>
 
-<view class="staff">2022-02-18</view>
+<view class="staff">2022-07-23</view>
 
 <view class="staff">
 小程序开发：circle
