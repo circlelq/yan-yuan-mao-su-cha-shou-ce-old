@@ -99,7 +99,7 @@
   <block wx:for="{{fostered_catlist}}">
     <navigator url="/pages/cats/{{item.name}}/{{item.name}}">
       <view class="catitem">
-        <image class='avator ' lazy-load src="{{url}}{{item.name}}.png" mode='aspectFill'></image>
+        <image lazy-load='true' class='avator ' lazy-load src="{{url}}{{item.name}}.png" mode='aspectFill'></image>
         <view class="cat-name">{{item.name}}</view>
       </view>
     </navigator>
@@ -115,7 +115,7 @@
   <block wx:for="{{unknown_catlist}}">
     <navigator url="/pages/cats/{{item.name}}/{{item.name}}">
       <view class="catitem">
-        <image class='avator ' lazy-load src="{{url}}{{item.name}}.png" mode='aspectFill'></image>
+        <image lazy-load='true' class='avator ' lazy-load src="{{url}}{{item.name}}.png" mode='aspectFill'></image>
         <view class="cat-name">{{item.name}}</view>
       </view>
     </navigator>
@@ -131,7 +131,7 @@
   <block wx:for="{{dead_catlist}}">
     <navigator url="/pages/cats/{{item.name}}/{{item.name}}">
       <view class="catitem">
-        <image class='avator ' lazy-load src="{{url}}{{item.name}}.png" mode='aspectFill'></image>
+        <image lazy-load='true' class='avator ' lazy-load src="{{url}}{{item.name}}.png" mode='aspectFill'></image>
         <view class="cat-name">{{item.name}}</view>
       </view>
     </navigator>
