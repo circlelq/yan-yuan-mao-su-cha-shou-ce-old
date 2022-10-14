@@ -1,5 +1,5 @@
 {
-  "pages": [
+  "pages": [ 
     "pages/index/index",
     "pages/cats/杰希/杰希",
     "pages/cats/英杰/英杰",
@@ -7,7 +7,7 @@
     "pages/cats/土谦/土谦",
     "pages/cats/小黄鸭/小黄鸭",
     "pages/cats/薏米/薏米",
-
+    
     "pages/about/about",
     "pages/logs/logs",
     "pages/science/science",
@@ -27,21 +27,18 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "selectedColor": "#94070a",
+    "selectedColor":"#94070a",
     "color": "#888888",
-    "list": [{
+    "list": [
+      {
         "text": "查猫",
         "pagePath": "pages/index/index"
-      },
-      {
-        "text": "科普",
-        "pagePath": "pages/science/science"
       },
       {
         "text": "关于",
         "pagePath": "pages/about/about"
       }
     ]
-  },
-  "lazyCodeLoading": "requiredComponents"
+  }
+
 }

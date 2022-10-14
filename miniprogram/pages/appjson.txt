@@ -26,10 +26,6 @@
         "pagePath": "pages/index/index"
       },
       {
-        "text": "科普",
-        "pagePath": "pages/science/science"
-      },
-      {
         "text": "关于",
         "pagePath": "pages/about/about"
       }
