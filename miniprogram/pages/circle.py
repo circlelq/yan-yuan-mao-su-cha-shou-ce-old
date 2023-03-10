@@ -8,6 +8,7 @@ import time
 import urllib.parse
 import urllib
 import openpyxl
+import shutil
 
 today = time.strftime("%Y-%m-%d", time.localtime())
 
@@ -47,6 +48,11 @@ for i in range(rowNum):
 
 """
 
+# 删除 cats 文件夹
+try:
+    shutil.rmtree('cats/')
+except OSError as e:
+    print("no cats")
 
 labels = [
     [2, '名字', lambda x:'【还没有名字】' if len(x) < 1 else x],
