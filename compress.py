@@ -18,8 +18,6 @@ def compress_file_jpg(fileName):
     inputPath = Path('input/')
     outPath = Path('out_put_files/')
     im = Image.open(inputPath / fileName)
-    im = im.convert('RGB')
-    im.save(outPath / fileName)
 
     try:
         for orientation in ExifTags.TAGS.keys():
@@ -34,6 +32,10 @@ def compress_file_jpg(fileName):
             im = im.rotate(90, expand=True)
     except:
         pass
+
+    im = im.convert('RGB')
+    im.save(outPath / fileName)
+
     x, y = im.size
     if x < sizeMax and y < sizeMax:
         # 原图尺寸足够小
