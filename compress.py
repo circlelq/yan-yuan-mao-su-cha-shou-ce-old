@@ -18,9 +18,9 @@ def compress_file_jpg(fileName):
     inputPath = Path('input/')
     outPath = Path('out_put_files/')
     im = Image.open(inputPath / fileName)
-    if im.format != 'JPEG':
-        print('文件后缀和文件类型不符合', fileName)
-        sys.exit(1)
+    im = im.convert('RGB')
+    im.save(outPath / fileName)
+
     try:
         for orientation in ExifTags.TAGS.keys():
             if ExifTags.TAGS[orientation] == 'Orientation':
