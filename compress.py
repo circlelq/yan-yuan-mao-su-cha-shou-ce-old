@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 # 压缩图片脚本
-from PIL import Image
+from PIL import Image, ExifTags
 from pathlib import Path
 import os
 from pathlib import Path
@@ -21,6 +21,19 @@ def compress_file_jpg(fileName):
     if im.format != 'JPEG':
         print('文件后缀和文件类型不符合', fileName)
         sys.exit(1)
+    try:
+        for orientation in ExifTags.TAGS.keys():
+            if ExifTags.TAGS[orientation] == 'Orientation':
+                break
+        exif = dict(im._getexif().items())
+        if exif[orientation] == 3:
+            im = im.rotate(180, expand=True)
+        elif exif[orientation] == 6:
+            im = im.rotate(270, expand=True)
+        elif exif[orientation] == 8:
+            im = im.rotate(90, expand=True)
+    except:
+        pass
     x, y = im.size
     if x < sizeMax and y < sizeMax:
         # 原图尺寸足够小
