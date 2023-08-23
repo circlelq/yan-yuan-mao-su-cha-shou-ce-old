@@ -6,6 +6,8 @@
 
 这个版本是一个方便使用的版本，之后会更新。另外大家可以参考北大猫协自己使用的代码 https://gitee.com/circlelq/SCCAPKU-miniprogram 。
 
+另外，建议大家使用新框架的版本 https://gitee.com/circlelq/WanliuMeow 。
+
 ## 如何使用
 
 其实整体来说使用非常简单，主要是填写 Excel 表格并保存，然后运行一下 python 代码就行，不需要写任何小程序的代码。使用说明见 https://gitee.com/circlelq/yan-yuan-mao-su-cha-shou-ce/wikis/Home
