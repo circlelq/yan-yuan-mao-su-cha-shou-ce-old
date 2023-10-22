@@ -137,6 +137,15 @@ bl: false
     }
   },
 
+  previewImage: function (e) {
+    let that = this;
+    let src = e.currentTarget.dataset.src;
+    wx.previewImage({
+      current: src,
+      urls: [src]
+    })
+  },
+  
   onShareTimeline: function (res) {
     if (res.from === 'button') {
       // 来自页面内转发按钮

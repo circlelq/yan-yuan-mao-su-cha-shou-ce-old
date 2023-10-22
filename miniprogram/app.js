@@ -37,13 +37,12 @@ App({
     userInfo: null,
     url: "https://pku-lostangel.oss-cn-beijing.aliyuncs.com/",
   },
-  
-
 })
 
 wx.showShareMenu({
   withShareTicket: true
 })
 
-wx.setInnerAudioOption({ obeyMuteSwitch: false });
-
+wx.setInnerAudioOption({
+  obeyMuteSwitch: false
+});
